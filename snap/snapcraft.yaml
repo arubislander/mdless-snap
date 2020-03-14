@@ -1,6 +1,6 @@
 name: mdless
 base: core18 
-version: '1.0.10+snap3'
+version: '1.0.10+snap4'
 summary: View Markdown comfortably in the terminal
 description: |
   mdless is a utility that provides a formatted and highlighted view 
