@@ -1,4 +1,3 @@
-
 # mdless [![Snap Status](https://build.snapcraft.io/badge/arubislander/mdless-snap.svg)](https://build.snapcraft.io/user/arubislander/mdless-snap)
 
 `mdless` is a utility that provides a formatted and highlighted view of Markdown files in Terminal.
@@ -48,3 +47,6 @@ The pager used is determined by system configuration in this order of preference
     -I, --all-images                 Include local and remote images in output 
     -h, --help                       Display this screen
     -v, --version                    Display version number
+
+## Links
+* [Main project on Github](https://github.com/ttscoff/mdless)
