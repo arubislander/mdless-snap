@@ -1,6 +1,6 @@
 name: mdless
 base: core18 
-version: '1.0.10+snap6'
+version: '1.0.10+snap7'
 summary: View Markdown comfortably in the terminal
 description: |
   mdless is a utility that provides a formatted and highlighted view 
@@ -20,6 +20,24 @@ parts:
       gem install mdless-*.gem -i $SNAPCRAFT_PART_INSTALL
     build-packages: [gcc, libc6-dev, make, ruby-dev]
     stage-packages: [ruby, git]
+  # This part removes all the files in this snap which already exist in
+  # connected content and base snaps. Since these files will be available
+  # at runtime from the content and base snaps, they do not need to be
+  # included in this snap itself.
+  #
+  # More info: https://forum.snapcraft.io/t/reducing-the-size-of-desktop-snaps/17280#heading--cleanup-part
+  #
+  cleanup:
+    after:  # Make this part run last; list all your other parts here
+      - mdless
+    plugin: nil
+    build-snaps:  # List all content-snaps and base snaps you're using here
+      - core18
+    override-prime: |
+      set -eux
+      for snap in "core18"; do  # List all content-snaps and base snaps you're using here
+          cd "/snap/$snap/current" && find . -type f,l -exec rm -f "$SNAPCRAFT_PRIME/{}" \;
+      done
 
 apps:
   mdless:
