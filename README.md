@@ -1,4 +1,7 @@
-# mdless [![Snap Status](https://build.snapcraft.io/badge/arubislander/mdless-snap.svg)](https://build.snapcraft.io/user/arubislander/mdless-snap)
+# mdless 
+<p align="center">
+<a href="https://build.snapcraft.io/user/arubislander/mdless-snap"><img src="https://build.snapcraft.io/badge/arubislander/mdless-snap.svg" alt="Snap Status"></a>
+</p>
 
 `mdless` is a utility that provides a formatted and highlighted view of Markdown files in Terminal.
 
