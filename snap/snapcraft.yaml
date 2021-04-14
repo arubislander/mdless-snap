@@ -1,5 +1,5 @@
 name: mdless
-base: core20
+base: core18
 version: 1.0.20
 summary: View Markdown comfortably in the terminal
 description: |
@@ -39,10 +39,10 @@ parts:
       - mdless
     plugin: nil
     build-snaps:  # List all content-snaps and base snaps you're using here
-      - core20
+      - core18
     override-prime: |
       set -eux
-      for snap in "core20"; do  # List all content-snaps and base snaps you're using here
+      for snap in "core18"; do  # List all content-snaps and base snaps you're using here
           cd "/snap/$snap/current" && find . -type f,l -exec rm -f "$SNAPCRAFT_PRIME/{}" \;
       done
 
