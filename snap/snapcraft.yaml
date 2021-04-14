@@ -1,6 +1,6 @@
 name: mdless
-base: core18 
-version: 1.0.15+snap9
+base: core20
+version: 1.0.20
 summary: View Markdown comfortably in the terminal
 description: |
   mdless is a utility that provides a formatted and highlighted view 
@@ -20,7 +20,7 @@ parts:
     # See 'snapcraft plugins'
     plugin: nil
     source: https://github.com/ttscoff/mdless.git
-    source-tag: "1.0.15"
+    source-tag: "1.0.20"
     source-type: git
     override-build: |
       gem build mdless.gemspec
@@ -39,10 +39,10 @@ parts:
       - mdless
     plugin: nil
     build-snaps:  # List all content-snaps and base snaps you're using here
-      - core18
+      - core20
     override-prime: |
       set -eux
-      for snap in "core18"; do  # List all content-snaps and base snaps you're using here
+      for snap in "core20"; do  # List all content-snaps and base snaps you're using here
           cd "/snap/$snap/current" && find . -type f,l -exec rm -f "$SNAPCRAFT_PRIME/{}" \;
       done
 
