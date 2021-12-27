@@ -1,6 +1,6 @@
 name: mdless
 base: core18
-version: 1.0.21
+version: 1.0.27
 summary: View Markdown comfortably in the terminal
 description: |
   mdless is a utility that provides a formatted and highlighted view 
@@ -20,7 +20,7 @@ parts:
     # See 'snapcraft plugins'
     plugin: nil
     source: https://github.com/ttscoff/mdless.git
-    source-tag: "1.0.21"
+    source-tag: "1.0.27"
     source-type: git
     override-build: |
       gem build mdless.gemspec
