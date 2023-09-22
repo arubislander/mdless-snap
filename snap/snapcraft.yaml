@@ -34,17 +34,17 @@ parts:
   #
   # More info: https://forum.snapcraft.io/t/reducing-the-size-of-desktop-snaps/17280#heading--cleanup-part
   #
-  cleanup:
-   after:  # Make this part run last; list all your other parts here
-     - mdless
-   plugin: nil
-   build-snaps:  # List all content-snaps and base snaps you're using here
-     - core20
-   override-prime: |
-     set -eux
-     for snap in "core20"; do  # List all content-snaps and base snaps you're using here
-         cd "/snap/$snap/current" && find . -type f,l -exec rm -f "$SNAPCRAFT_PRIME/{}" \;
-     done
+  # cleanup:
+  #  after:  # Make this part run last; list all your other parts here
+  #    - mdless
+  #  plugin: nil
+  #  build-snaps:  # List all content-snaps and base snaps you're using here
+  #    - core20
+  #  override-prime: |
+  #    set -eux
+  #    for snap in "core20"; do  # List all content-snaps and base snaps you're using here
+  #        cd "/snap/$snap/current" && find . -type f,l -exec rm -f "$SNAPCRAFT_PRIME/{}" \;
+  #    done
 
 apps:
   mdless:
